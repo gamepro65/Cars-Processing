@@ -9,18 +9,14 @@ public class Main extends PApplet{
 	public void setup()
 	{
 		size(500, 500);
-		smooth();
-		
+		smooth();		
 		for (int x = 0; x < cars.length; x++)
 		{
 			cars[x] = new Car(this, x*50, 10 + (x * 50), (int)(Math.random()*5));
-		}
-		
-		
+		}	
 	}
 	public static void main(String[] args) {
-		PApplet.main(new String[] {"--present", "Main"});
-		
+		PApplet.main(new String[] {"--present", "Main"});		
 	}
 	
 	public void draw()
@@ -29,10 +25,7 @@ public class Main extends PApplet{
 		for (int x = 0; x < cars.length; x++)
 		{
 			cars[x].draw();
-			cars[x].moveRight();
-			
-			
+			cars[x].moveRight();			
 		}
-	}
-	
+	}	
 }
